@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Lib Tech Skate Banana BTX Snowboard",
+    "price":300,
+    "description": "When youre dropping in on the Lib Tech SkateBanana",
+    "image": "https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119"
+  },
+  {
+    "id": 2,
+    "name": "Lib Tech Skate Banana BTX Snowboard",
+    "price":200,
+    "description": "When youre dropping in on the Lib Tech SkateBanana",
+    "image": "https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119"
+  },
+  {
+    "id": 3,
+    "name": "Lib Tech Skate Banana BTX Snowboard",
+    "price":100,
+    "description": "When youre dropping in on the Lib Tech SkateBanana",
+    "image": "https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119"
+  },
+  {
+    "id": 4,
+    "name": "Lib Tech Skate Banana BTX Snowboard",
+    "price":600,
+    "description": "When youre dropping in on the Lib Tech SkateBanana",
+    "image": "https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119"
+  },
+  {
+    "id": 5,
+    "name": "Lib Tech Skate Banana BTX Snowboard",
+    "price":500,
+    "description": "When youre dropping in on the Lib Tech SkateBanana",
+    "image": "https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119"
+  }
+]

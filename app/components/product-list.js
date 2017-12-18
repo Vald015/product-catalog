@@ -1,31 +1,7 @@
 import React from 'react';
-
-// const products =[
-//   {
-//     id: 1,
-//     name: 'Lib Tech Skate Banana BTX Snowboard',
-//     description: 'When youre dropping in on the Lib Tech SkateBanana',
-//     image: 'https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119'
-//   },
-//   {
-//     id: 2,
-//     name: 'Lib Tech Skate Banana BTX Snowboard',
-//     description: 'When youre dropping in on the Lib Tech SkateBanana',
-//     image: 'https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119'
-//   },
-//   {
-//     id: 3,
-//     name: 'Lib Tech Skate Banana BTX Snowboard',
-//     description: 'When youre dropping in on the Lib Tech SkateBanana',
-//     image: 'https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119'
-//   },
-//   {
-//     id: 4,
-//     name: 'Lib Tech Skate Banana BTX Snowboard',
-//     description: 'When youre dropping in on the Lib Tech SkateBanana',
-//     image: 'https://vignette.wikia.nocookie.net/narutocouple/images/7/7e/Sasuke-uchiha-sasuke-34355552-1280-720.jpg/revision/latest?cb=20130722015119'
-//   }
-// ];
+import { getProducts } from '../actions/products';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 const ProductListRow = (props) =>{
   return (
@@ -43,12 +19,30 @@ const ProductListRow = (props) =>{
   );
 }
 
-export default class ProductList extends React.Component{
+
+class ProductList extends React.Component{
+  //Life cycle method
+  componentDidMount(){
+    this.props.getProducts();
+  }
+
   render(){
     return (
       <ul className = "media-list">
-        {products.map((p)=> (<ProductListRow key = {p.id} product = {p}/>))}
+        {this.props.products.map((p) => (<ProductListRow key = {p.id} product = {p}/>))}
       </ul>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  //console.log(state.products);
+  return { products: state.products };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ getProducts },dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+// wire up redux action creators
